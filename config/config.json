@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "ipa_db",
+    "database": "dbIPA",
     "host": "localhost",
     "dialect": "mysql"
   },
