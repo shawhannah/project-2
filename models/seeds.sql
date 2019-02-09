@@ -1,13 +1,12 @@
 INSERT INTO ipa
-    (beer)
+    (beer, brewery, tastes, rating)
 VALUES
-    ("Pernicious");
+    ("Pernicious", "Wicked Weed Brewing", "American/West Coast IPA");
 INSERT INTO ipa
-    (beer)
+    (beer, brewery, tastes, rating)
 VALUES
-    ("Hoppyum");
+    ("Hoppyum", "Foothills Brewing Company", "American");
 INSERT INTO ipa
-    (beer)
+    (beer, brewery, tastes, rating)
 VALUES
-    ("Space Dust");
-
+    ("Space Dust", "Elysian Brewing Company",    ); 

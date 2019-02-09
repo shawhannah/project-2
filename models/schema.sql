@@ -11,8 +11,10 @@ beer varchar
     (255) NOT NULL, 
 brewery varchar
     (255) NOT NULL, 
-typeOf varchar
+tastes varchar
     (255) NOT NULL, 
+rating integer
+    (2) NOT NULL,
 PRIMARY KEY
     (id)
 );
