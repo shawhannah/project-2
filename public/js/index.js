@@ -1,6 +1,9 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
+// var $exampleText = $("#example-text");
+// var $exampleDescription = $("#example-description");
+
+var $beerText = $("#beerText");
+var $breweryText = $("#breweryText");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
@@ -64,12 +67,15 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
+
   var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    beer: $beerText.val().trim(),
+    brewery: $breweryText.val().trim()
   };
 
-  if (!(example.text && example.description)) {
+  console.log(example);
+
+  if (!(example.beer && example.brewery)) {
     alert("You must enter an example text and description!");
     return;
   }
@@ -78,8 +84,8 @@ var handleFormSubmit = function(event) {
     refreshExamples();
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  // $beerText.val("");
+  // $breweryText.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
