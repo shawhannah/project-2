@@ -11,7 +11,7 @@ beer varchar
     (255) NOT NULL, 
 brewery varchar
     (255) NOT NULL, 
-type varchar
+typeOf varchar
     (255) NOT NULL, 
 PRIMARY KEY
     (id)
