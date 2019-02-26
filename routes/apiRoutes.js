@@ -1,26 +1,24 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get all beers
+  app.get("/api/beers", function(req, res) {
+    db.Beers.findAll({}).then(function(dbBeers) {
+      res.json(dbBeers);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Create a new beer
+  app.post("/api/beers", function(req, res) {
+    db.Beers.create(req.body).then(function(dbBeers) {
+      res.json(dbBeers);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
+  // Delete a beer by id
+  app.delete("/api/beers/:id", function(req, res) {
+    db.Beers.destroy({ where: { id: req.params.id } }).then(function(dbBeers) {
+      res.json(dbBeers);
     });
   });
 };

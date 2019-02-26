@@ -1,50 +1,50 @@
 // Get references to page elements
-// var $exampleText = $("#example-text");
-// var $exampleDescription = $("#example-description");
+// var $beerText = $("#beer-text");
+// var $beerDescription = $("#beer-description");
 
 var $beerText = $("#beerText");
 var $breweryText = $("#breweryText");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $beerList = $("#beer-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveBeers: function(beers) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/beers",
+      data: JSON.stringify(beers)
     });
   },
-  getExamples: function() {
+  getBeers: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/beers",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteBeers: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/beers/" + id,
       type: "DELETE"
     });
   }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+// refreshBeers gets new beers from the db and repopulates the list
+var refreshBeers = function() {
+  API.getBeers().then(function(data) {
+    var $beers = data.map(function(beer) {
       var $a = $("<a>")
-        .text(example.beer)
-        .attr("href", "/example/" + example.id);
+        .text(beer.beer)
+        .attr("href", "/beer/" + beer.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": beer.id
         })
         .append($a);
 
@@ -57,49 +57,48 @@ var refreshExamples = function() {
       return $li;
     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
+    $beerList.empty();
+    $beerList.append($beers);
   });
 };
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
+// handleFormSubmit is called whenever we submit a new beer
+// Save the new beer to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-
-  var example = {
+  var beer = {
     beer: $beerText.val().trim(),
     brewery: $breweryText.val().trim()
   };
 
-  console.log(example);
+  console.log(beer);
 
-  if (!(example.beer && example.brewery)) {
-    alert("You must enter an example text and description!");
+  if (!(beer.beer && beer.brewery)) {
+    alert("You must enter an beer text and description!");
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  API.saveBeers(beer).then(function() {
+    refreshBeers();
   });
 
   // $beerText.val("");
   // $breweryText.val("");
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
+// handleDeleteBtnClick is called when an beer's delete button is clicked
+// Remove the beer from the db and refresh the list
 var handleDeleteBtnClick = function() {
   var idToDelete = $(this)
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
+  API.deleteBeer(idToDelete).then(function() {
+    refreshBeers();
   });
 };
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$beerList.on("click", ".delete", handleDeleteBtnClick);

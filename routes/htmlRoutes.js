@@ -3,10 +3,10 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Beers.findAll({}).then(function(dbBeers) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        beers: dbBeers
       });
     });
   });
