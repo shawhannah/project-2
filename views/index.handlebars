@@ -27,8 +27,8 @@
         <h3>Beer List</h3>
         <ul id="beer-list" class="list-group">
           {{#each beers}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="beer/{{this.id}}">{{this.text}}</a>
+          <li data-id="{{this.beer}}" class="list-group-item">
+            <a href="beer/{{this.brewery}}">{{this.beer}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
