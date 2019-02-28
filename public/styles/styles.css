@@ -8,6 +8,8 @@ h1 {
   font-family: 'Cedarville Cursive', cursive;
   font-size: 120px!important;
   color: #ffffff;
+  line-height: 110px!important;
+  padding-bottom: 8px;
 }
 
 h2 {
@@ -15,6 +17,8 @@ h2 {
   letter-spacing: -4px;
   font-size: 120px!important;
   color: #ffffff;
+  line-height: 95px!important;
+  padding-top: 10px;
 }
 
 h3 {
@@ -28,18 +32,20 @@ color: #6facb4;
 }
 
 .jumbotron {
-  background-color: #6facb4;
   margin-top: 10px;
   padding: .5px;
 }
 
-#home {
+body {
   background-color: #1e2f51;
 }
 
 .btn {
   background-color: #6facb4;
   border-color: #6facb4;
+  margin: 5px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 
 .lead {
@@ -50,4 +56,25 @@ color: #6facb4;
 
 #beer-list {
   margin-bottom: 15px;
+}
+
+label {
+  font-family: 'Poppins', sans-serif;
+  color: #6facb4;
+  font-weight: bold;
+}
+
+#signup {
+  margin-left: 565px;
+}
+
+.page-header {
+  background-color: #6facb4;
+}
+
+.subtitle {
+  color: #1e2f51;
+  margin-left: 365px!important;
+  line-height: 0px!important;
+  padding-bottom: 15px;
 }
