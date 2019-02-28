@@ -1,16 +1,19 @@
 .list-group-item {
   line-height: 2.5;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 5px;
 } 
 
 h1 {
   font-family: 'Cedarville Cursive', cursive;
-  font-size: 100px!important;
+  font-size: 120px!important;
   color: #ffffff;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: -4px;
+  font-size: 120px!important;
   color: #ffffff;
 }
 
@@ -26,6 +29,8 @@ color: #6facb4;
 
 .jumbotron {
   background-color: #6facb4;
+  margin-top: 10px;
+  padding: .5px;
 }
 
 #home {
@@ -35,4 +40,14 @@ color: #6facb4;
 .btn {
   background-color: #6facb4;
   border-color: #6facb4;
+}
+
+.lead {
+  font-family: 'Montserrat', sans-serif;
+  color: #1e2f51;
+  display: inline-block;
+}
+
+#beer-list {
+  margin-bottom: 15px;
 }
