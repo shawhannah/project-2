@@ -1,3 +1,38 @@
 .list-group-item {
   line-height: 2.5;
+} 
+
+h1 {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 100px!important;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -4px;
+  color: #ffffff;
+}
+
+h3 {
+font-family: 'Poppins', sans-serif;
+color: #6facb4;
+}
+
+.form-group {
+  font-family: 'Poppins', sans-serif;
+  color: #6facb4;
+}
+
+.jumbotron {
+  background-color: #6facb4;
+}
+
+#home {
+  background-color: #1e2f51;
+}
+
+.btn {
+  background-color: #6facb4;
+  border-color: #6facb4;
 }
