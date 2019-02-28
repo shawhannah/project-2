@@ -94,7 +94,7 @@ var handleDeleteBtnClick = function() {
     .parent()
     .attr("data-id");
 
-  API.deleteBeer(idToDelete).then(function() {
+  API.deleteBeers(idToDelete).then(function() {
     refreshBeers();
   });
 };
