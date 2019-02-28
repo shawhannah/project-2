@@ -7,8 +7,6 @@ var bodyParser = require("body-parser");
 var env = require("dotenv").load();
 var app = express();
 
-var authRoutes = require("./routes/authRoutes")(app, passport);
-
 var PORT = process.env.PORT || 3000;
 
 //For BodyParser

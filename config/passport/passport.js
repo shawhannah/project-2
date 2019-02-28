@@ -22,6 +22,8 @@ module.exports = function(passport, user) {
           return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
         };
 
+        console.log('here');
+
         User.findOne({
           where: {
             email: email
@@ -34,6 +36,7 @@ module.exports = function(passport, user) {
           } else {
             var userPassword = generateHash(password);
 
+            console.log('here 2');
             var data = {
               email: email,
 
@@ -58,7 +61,6 @@ module.exports = function(passport, user) {
       }
     )
   );
-};
 
 //serialize
 passport.serializeUser(function(user, done) {
@@ -85,3 +87,4 @@ passport.deserializeUser(function(id, done) {
   });
 
 });
+};
