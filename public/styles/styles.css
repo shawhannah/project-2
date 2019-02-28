@@ -62,10 +62,17 @@ label {
   font-family: 'Poppins', sans-serif;
   color: #6facb4;
   font-weight: bold;
+  font-size: large;
 }
 
 #signup {
   margin-left: 565px;
+  padding-top: 10px;
+}
+
+#signin {
+  margin-left: 565px;
+  padding-top: 10px;
 }
 
 .page-header {

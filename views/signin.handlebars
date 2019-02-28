@@ -2,16 +2,40 @@
 <html>
 
 <head>
-    <title></title>
+    <title>myIPA</title>
 </head>
+
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                {{!-- Jumbotron --}}
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-2" style="text-align:left;float:left;">my</h1>
+                        <h2 class="display-2" style="text-align:left;float:left;">IPA</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p class="lead subtitle">NEVER FORGET YOUR FAVORITES</p>
+        </div>
+    </div>
+</div>
 
 <body>
     <form id="signin" name="signin" method="post" action="signin">
         <label for="email">Email Address</label>
+        <br>
         <input class="text" name="email" type="text" />
+        <br>
         <label for="password">Password</label>
+        <br>
         <input name="password" type="password" />
+        <br>
         <input class="btn" type="submit" value="Sign In" />
+        <br>
     </form>
 
 </body>
