@@ -13,9 +13,19 @@ module.exports = function(app, passport) {
       failureRedirect: "/signup"
     })
   );
-  app.get('/dashboard',authController.dashboard);
+  app.get('/dashboard',isLoggedIn, authController.dashboard);
 
   app.get('/logout',authController.logout);
+
+  function isLoggedIn(req, res, next) {
+ 
+    if (req.isAuthenticated())
+     
+        return next();
+         
+    res.redirect('/signin');
+ 
+}
  
 };
 
